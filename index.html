@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>New Factorello</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles/app.css">
+
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="sidebarContent">
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+  </div>
+
+</div>
+
+
+<div id="main">
+    <div class="content">
+    
+        <div class="header">
+          <h2>Header</h2>
+          <button class="openbtn" onclick="openNav()">☰ Toggle Sidebar</button>
+          <h1></h1>
+        </div>
+    
+        <div class="row">
+        <div class="column side" style="background-color:#aaa;">Column</div>
+        <div class="column middle" style="background-color:#bbb;">Column</div>
+        <div class="column side" style="background-color:#ccc;">Column</div>
+        </div>
+    
+        <div class="footer">
+        <p>Footer</p>
+        </div>
+    </div>    
+</div>
+
+
+<script src='scripts/sidebar.js'></script>
+
+</body>
+</html>
