@@ -1,50 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>New Factorello</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles/app.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>New Factorello</title>
+
+  <link rel="stylesheet" href="styles/sidebar.css">
+  <link rel="stylesheet" href="styles/content.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <link href='fullcalendar/packages/core/main.css' rel='stylesheet' />
+  <link href='fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
+
+  <script src='fullcalendar/packages/core/main.js'></script>
+  <script src='fullcalendar/packages/daygrid/main.js'></script>
+
+  <script src="scripts/calendar.js"></script>
 
 </head>
+
+
 <body>
 
-<div id="mySidebar" class="sidebar">
-
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <div class="sidebarContent">
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Clients</a>
-      <a href="#">Contact</a>
+  <div id="mySidebar" class="sidebar">
+    <a href="#">Acabamento</a>
+    <a href="#">Montagem</a>
+    <a href="#">Furação</a>
+    <a href="#">Guilhotina</a>
+    <a href="#">Pautadeira</a>
+    <a href="#">Corte</a>
+    <a href="#">Serigrafia</a>
+    <a href="#">Coladeira</a>
+    <a href="#">Solda</a>
+    <a href="#">Digital</a>
+    <a href="#">Espiralação</a>
+    <a href="#">Extrusão</a>
+  </div>
+  
+  <div id="main">
+    <button class="navbtn" onclick="navHandler()">&#9776;</button> 
+    <div class="header">
+        <h2>Header</h2>
+      </div>
+      
+      <div class="row">
+        <div class="column side" style="background-color:#aaa;">Feed</div>
+        <div class="column middle" style="background-color:#bbb;">
+            <div id='calendar'></div>
+        </div>
+        <div class="column side" style="background-color:#ccc;">External Events + Calculator</div>
+      </div>
+      
+      <div class="footer">
+        <p>Task Manager</p>
+      </div>
   </div>
 
-</div>
-
-
-<div id="main">
-    <div class="content">
-    
-        <div class="header">
-          <h2>Header</h2>
-          <button class="openbtn" onclick="openNav()">☰ Toggle Sidebar</button>
-          <h1></h1>
-        </div>
-    
-        <div class="row">
-        <div class="column side" style="background-color:#aaa;">Column</div>
-        <div class="column middle" style="background-color:#bbb;">Column</div>
-        <div class="column side" style="background-color:#ccc;">Column</div>
-        </div>
-    
-        <div class="footer">
-        <p>Footer</p>
-        </div>
-    </div>    
-</div>
-
-
-<script src='scripts/sidebar.js'></script>
-
 </body>
+
+<script src="scripts/sidebar.js"></script>
+
 </html>
