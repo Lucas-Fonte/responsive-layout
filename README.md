@@ -1,4 +1,8 @@
 # responsive-layout
-Teste de layouts responsivos do zero, num futuro, fazer o mesmo exemplo com React
+
+Testing out my own responsive layouts with fullcalendar workinn responsively in an application
+
+
+
 
 
