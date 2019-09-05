@@ -6,17 +6,36 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>New Factorello</title>
 
-  <link rel="stylesheet" href="styles/sidebar.css">
-  <link rel="stylesheet" href="styles/content.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
-  <link href='fullcalendar/packages/core/main.css' rel='stylesheet' />
+  <!-- <link href='fullcalendar/packages/core/main.css' rel='stylesheet' />
   <link href='fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
+  <link href='fullcalendar/packages/timegrid/main.css' rel='stylesheet' />
 
   <script src='fullcalendar/packages/core/main.js'></script>
-  <script src='fullcalendar/packages/daygrid/main.js'></script>
+  <script src='fullcalendar/packages/interaction/main.js'></script>
+  <script src='fullcalendar/packages/timegrid/main.js'></script>
+  <script src='fullcalendar/packages/daygrid/main.js'></script> -->
 
+  <link href='https://unpkg.com/@fullcalendar/core@4.3.1/main.min.css' rel='stylesheet' />
+  <link href='https://unpkg.com/@fullcalendar/timeline@4.3.0/main.min.css' rel='stylesheet' />
+  <link href='https://unpkg.com/@fullcalendar/resource-timeline@4.3.0/main.min.css' rel='stylesheet' />
+  <link href='https://unpkg.com/@fullcalendar/daygrid@4.3.0/main.min.css' rel='stylesheet' />
+  <link href='https://unpkg.com/@fullcalendar/timegrid@4.3.0/main.min.css' rel='stylesheet' />
+
+
+  <script src='https://unpkg.com/@fullcalendar/core@4.3.1/main.min.js'></script>
+  <script src='https://unpkg.com/@fullcalendar/interaction@4.3.0/main.min.js'></script>
+  <script src='https://unpkg.com/@fullcalendar/timeline@4.3.0/main.min.js'></script>
+  <script src='https://unpkg.com/@fullcalendar/resource-common@4.3.1/main.min.js'></script>
+  <script src='https://unpkg.com/@fullcalendar/resource-timeline@4.3.0/main.min.js'></script>
+  <script src='https://unpkg.com/@fullcalendar/daygrid@4.3.0/main.min.js'></script>
+  <script src='https://unpkg.com/@fullcalendar/timegrid@4.3.0/main.min.js'></script>
+
+  <link rel="stylesheet" href="styles/sidebar.css">
+  <link rel="stylesheet" href="styles/calendar.css">
+  <link rel="stylesheet" href="styles/content.css">
   <script src="scripts/calendar.js"></script>
 
 </head>
@@ -48,9 +67,24 @@
       <div class="row">
         <div class="column side" style="background-color:#aaa;">Feed</div>
         <div class="column middle" style="background-color:#bbb;">
-            <div id='calendar'></div>
+            <div id='calendar-container'>
+              <div id='calendar'></div>
+            </div>
         </div>
-        <div class="column side" style="background-color:#ccc;">External Events + Calculator</div>
+        <div class="column side" style="background-color:#ccc;">
+          <div id='external-events'>
+            <p>
+              <strong>Draggable Events</strong>
+            </p>
+            <div class='fc-event'>My Event 1</div>
+            <div class='fc-event'>My Event 2</div>
+            <div class='fc-event'>My Event 3</div>
+            <div class='fc-event'>My Event 4</div>
+            <div class='fc-event'>My Event 5</div>
+            <p>
+            </p>
+          </div>
+        </div>
       </div>
       
       <div class="footer">
