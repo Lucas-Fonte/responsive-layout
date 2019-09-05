@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   let calendar = new Calendar(calendarEl, {
+    schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source',
     plugins: [ 'interaction', 'dayGrid', 'timeGrid' , 'resourceTimeline'],
     header: {
       left: 'prev,next today',
