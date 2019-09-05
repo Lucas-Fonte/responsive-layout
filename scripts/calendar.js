@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     dateClick: function(info) {
       alert('clicked ' + info.dateStr);
     },
+    selectable: true,
     select: function(info) {
       alert('selected ' + info.startStr + ' to ' + info.endStr);
     }, 
