@@ -1,11 +1,29 @@
 
 .header {
-  background-color: #f1f1f1;
+
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  font-size:14px;
+  padding: 5px;
   text-align: center;
 }
+
+.navbtn {
+  font-size: 20px;
+  z-index: 999;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+  float: right;
+  padding: 10px 15px;
+  border: none;
+  transition: color 0.3s;
+}
+
+.navbtn:hover {
+  color: white;
+}
+
 
 .row {
   display: -webkit-flex;
@@ -24,6 +42,7 @@
 
 /* Middle column */
 .column.middle {
+  padding:10px;
   -webkit-flex: 3;
   -ms-flex: 3;
   flex: 3;

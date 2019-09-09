@@ -1,3 +1,11 @@
+// function selectedArea(){
+//   let title = document.getElementById('title').value;
+//   title = 'events';
+//  //calendar.rerenderEvents();     
+//   return title;
+// }
+
+
 document.addEventListener('DOMContentLoaded', function() {
   let Calendar = FullCalendar.Calendar;
   let Draggable = FullCalendarInteraction.Draggable;
@@ -17,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   let calendar = new Calendar(calendarEl, {
     schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source',
+    weekends: false,
     plugins: [ 'interaction', 'dayGrid', 'timeGrid' , 'resourceTimeline'],
     header: {
       left: 'prev,next today',
@@ -26,6 +35,13 @@ document.addEventListener('DOMContentLoaded', function() {
     dateClick: function(info) {
       alert('clicked ' + info.dateStr);
     },
+    events: {  
+      url: '.././Particular/load.php',
+      method: 'GET',
+      extraParams:{area: "events"},
+      textColor: 'white',
+    },
+
     selectable: true,
     select: function(info) {
       alert('selected ' + info.startStr + ' to ' + info.endStr);

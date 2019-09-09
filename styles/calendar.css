@@ -1,3 +1,8 @@
+@keyframes fade {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 #external-events {
   border-radius: 20px;
   z-index: 2;
@@ -11,11 +16,17 @@
   padding: 2px;
   cursor: pointer;
 }
+
 #calendar {
-  max-height: 550px;
+  padding:10px;
+  font-size: 12px;
+  animation: fade 1.0s;
+  transition: font-size 1.0s ease-in-out;
+  /* max-height: 500px; */
 }
+
 #calendar-container {
-  font-size: 10px;
+  
   padding: 15px;
   border-radius: 20px;
   z-index: 1;

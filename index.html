@@ -58,20 +58,20 @@
     <a href="#">Extrusão</a>
   </div>
   
-  <div id="main">
-    <button class="navbtn" onclick="navHandler()">&#9776;</button> 
+  <div id="main">   
     <div class="header">
+      <button class="navbtn" onclick="navHandler()">&#9776;</button> 
         <h2>Header</h2>
       </div>
       
       <div class="row">
-        <div class="column side" style="background-color:#aaa;">Feed</div>
-        <div class="column middle" style="background-color:#bbb;">
+        <div class="column side" >Feed</div>
+        <div id="columnMiddle" class="column middle">
             <div id='calendar-container'>
               <div id='calendar'></div>
             </div>
         </div>
-        <div class="column side" style="background-color:#ccc;">
+        <div class="column side">
           <div id='external-events'>
             <p>
               <strong>Draggable Events</strong>
@@ -82,6 +82,60 @@
             <div class='fc-event'>My Event 4</div>
             <div class='fc-event'>My Event 5</div>
             <p>
+                <div id = "calculator">
+                        
+                    <label>Produto</label>
+
+                    <select id="type" onchange="calculator(); calculateTotal()">
+                        <option value="None">Select type</option>
+                        <?php include '.././Particular/list.php';?>				      				
+                    </select>
+
+                    <br></br>
+                    <div>
+                    <label>Processo</label>
+                    <select id="process" onchange="calculateTotal()">
+                        <option value="None">Select process</option>
+                        <?php include '.././Particular/listProcess.php';?>		      				
+                    </select>
+                    <br>
+                    </div>
+
+                    <br>
+                    <label>Quantidade de Produtos</label>
+                        <input type="number"  id="qtde" />
+
+                    <br>
+                    <label >Quantidade de pessoas</label>
+                        <input type="number" id="pessoas" value=1 />
+
+                    <br><label style ="font-size:12px; font-weight: bold;">Peças</label>
+                    <input id = "pecas" type = "number" value=0 style = "width: 50px; margin-top: 10px; margin-left: 10px;"/>
+
+                    <p>
+                        <input type="button" value = "Calcular" onclick="calculateTotal()"/>
+                        <input id = "color" type = "color" />
+                    </p>
+                
+                    <label>OP</label>
+                        <input type="number"  id="OP" style="margin-top:5px; width:40%;"/><br>
+                    <label>Começo</label>
+                        <input id = "start" type="datetime-local" style = "margin-top: 5px;"/><br>
+                    <label>Fim</label><br>
+                        <input id = "end" type="datetime-local"><br>
+                    <label style="margin-top:5px;">Perdas</label>
+                        <input type="number"  id="perdas"  style="margin-top:5px;"  />
+                        <input type="button" value = "Apontar" onclick="apontamento()" style="margin-top: 5px;"/>
+                        <input type="button" value = "Inserir" onclick="inserir()" style="margin-top: 5px;"/>
+                        
+                    <p></p>
+                    <div id="totalhour"></div>
+                    <div id="totalday"></div>
+                    <div id="weekday" style='width:125px;'></div>
+                    <div id="weekdayEnd" style='width:125px;'></div>
+
+              </div>
+
             </p>
           </div>
         </div>
